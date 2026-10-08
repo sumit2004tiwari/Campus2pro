@@ -1,0 +1,33 @@
+export type StudentEnquiry = {
+  fullName: string;
+  mobile: string;
+  whatsapp: string;
+  email: string;
+  city: string;
+  college: string;
+  course: string;
+  branch: string;
+  currentYear: string;
+  graduationYear: string;
+  cgpa: string;
+  careerGoal: string;
+  interestedAreas: string[];
+  skillLevel: string;
+  challenge: string;
+  learningMode: string;
+  timing: string;
+  message: string;
+  consent: boolean;
+  website: string;
+};
+export type FormErrors = Partial<Record<keyof StudentEnquiry, string>>;
+export type Program = {
+  id: string;
+  name: string;
+  category: "Development" | "Data & AI" | "Career";
+  icon: "code" | "brain" | "chart" | "phone" | "cloud" | "briefcase";
+  color: string;
+  description: string;
+  skills: string[];
+  outcome: string;
+};
